@@ -36,6 +36,9 @@
         .find{
 
         }
+        .title {
+
+        }
     </style>
 </head>
 <body>
@@ -53,25 +56,23 @@
         </div>
     </nav>
     <div class="alignment">
-        <div>
+        <div class="title">
             <h1 class="padding">Where Ideas Meet Execution.</h1>
-            <h5 class="padding">
-                Hi, I'm MD Rakibul Islam, a passionate and driven Computer Science student with a knack for building intelligent systems, intuitive applications, and impactful solutions. I specialize in turning ideas into functional, user-centered products using technologies like Flutter, Firebase, ESP32-CAM, and Machine Learning.
-
-                From smart IoT systems to AI-powered apps, I love tackling real-world challenges with clean code, creative design, and scalable architecture. My journey is fueled by curiosity, continuous learning, and a mission to make tech accessible and meaningful.
-
-                Let’s connect and create something awesome.
-            </h5>
-            <h5 id="test">This is a file with id. </h5>
+            <h3 class="padding">
+                Hi, I'm MD Rakibul Islam.
+            </h3>
+            <h3 id="test">This is a file with id. </h3>
         </div>
         <div>
-            <img src="images/phone2.jpg" alt=""  width="400" height="600">
+            <img id = "avatar" src="images/phone2.jpg" alt=""  width="400" height="600">
         </div>
         
     </div>
     <div class="padding">
         <button class="button-style">Download CV</button>
     </div>
+
+    
 
 
     <script src="{{asset('assets/js/script.js')}}">
