@@ -1,130 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('index')
+@push('style')
+@endpush
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio</title>
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #1f2937, #111827);
-            color: #eee;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-
-        .display {
-            display: flex;
-            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-            height: 50px;
-            color: white;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .alignment {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .padding {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        .find a {
-            padding: 0 15px;
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-        }
-
-        .find a:hover {
-            color: #56aaff;
-            border-bottom: 2px solid #56aaff;
-        }
-
-        .button-style {
-            background-color: rgb(86, 87, 141);
-            border: none;
-            color: white;
-            font-size: 16px;
-            padding: 15px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            margin: 20px auto;
-            display: block;
-        }
-
-        .button-style:hover {
-            background-color: #565787;
-            transform: scale(1.05);
-        }
-
-        #avatar {
-            border: 2px solid rgb(41, 35, 35);
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(86, 87, 141, 0.5);
-        }
-
-        h1 {
-            font-weight: 700;
-            font-size: 3em;
-            margin: 0;
-        }
-
-        h3 {
-            font-weight: 400;
-            margin-top: 10px;
-            margin-bottom: 0;
-        }
-    </style>
-</head>
-
-<body>
+@section('main-content')
     <nav>
         <div class="display alignment">
             <div class="padding">Rakibul</div>
             <div class="find">
                 <a href="" class="padding top">Home</a>
-                <a href="" class="padding top">About</a>
-                <a href="" class="padding top">Services</a>
-                <a href="" class="padding top">Portfolio</a>
-                <a href="" class="padding top">Pages</a>
-                <a href="" class="padding top">Contact</a>
+                <a href="#about" class="padding top">About</a>
+                <a href="#education" class="padding top">Education</a>
+                <a href="#Projects" class="padding top">Projects</a>
+                <a href="#contact" class="padding top">Contact</a>
             </div>
         </div>
     </nav>
-    <div class="alignment">
-        <div class="title">
-            <h1 class="padding">Where Ideas Meet Execution.</h1>
-            <h3 class="padding">
-                Hi, I'm MD Rakibul Islam.
-            </h3>
-            <h3 id="test">This is a file with id. </h3>
+    <div class="section1">
+        <div class="alignment view">
+            <div class="title">
+                <h1 class="padding">Hi! I am MD Rakibu Islam</h1>
+                <h3 class="padding">
+                    Where Ideas Meet Execution.
+                </h3>
+            </div>
+            <div class="padd">
+                <img id = "avatar" src="images/phone2.jpg" alt="" width="200" height="250"
+                    style="border:2px solid rgb(41, 35, 35); border-radius: 50%">
+            </div>
+
         </div>
-        <div class="padd">
-            <img id = "avatar" src="images/phone2.jpg" alt="" width="200" height="250"
-                style="border:2px solid rgb(41, 35, 35); border-radius: 50%">
+        <div class="padding">
+            <button id = "button" class="button-style">Download CV</button>
+        </div>
+    </div>
+
+    <div id="about" class="about-container section1">
+        <div class="about-header">
+            <h1>About Me</h1>
+            <p>Hello! I am Md Rakibul Islam, a student at Daffodil International University and an aspiring Software
+                Engineer.</p>
         </div>
 
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images/phone2.jpg" alt="Md Rakibul Islam">
+            </div>
+            <div class="about-text">
+                <h2>Software Engineer</h2>
+                <p>
+                    I have a passion for coding and building efficient software solutions that make a difference.
+                    I have a passion for coding and building efficient software solutions that make a difference.
+                    I have a passion for coding and building efficient software solutions that make a difference.
+
+                </p>
+                <p>
+                    Beyond programming, I enjoy learning new technologies. Beyond programming, I enjoy learning new
+                    technologiesBeyond programming, I enjoy learning new technologiesBeyond programming, I enjoy learning
+                    new technologies.
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="padding">
-        <button class="button-style">Download CV</button>
+
+
+    <div id="education" class="section1 education-page">
+        <div>
+            <h1>Education</h1>
+        </div>
+        <div class="education-card">
+            <div class="ed-pd2">
+                <h2>SSC</h2>
+                <h3>Satkhira Police Line School</h3><br>
+                <h3>Board: Jessore</h3><br>
+                <h3>Result: GPA-5.00</h3><br>
+                <h3>Year: 2017</h3><br>
+            </div>
+
+            <div class="ed-pd2">
+                <h2>HSC</h2>
+                <h3>Govt. BL Collage, Daulatpur</h3><br>
+                <h3>Board: Jessore</h3><br>
+                <h3>Result: GPA-5.00</h3><br>
+                <h3>Year: 2019</h3><br>
+            </div>
+            <div class="ed-pd2">
+                <h2>B.Sc</h2>
+                <h3>Satkhira Police Line School</h3><br>
+                <h3>Board: Jessore</h3><br>
+                <h3>Result: GPA-5.00</h3><br>
+                <h3>Year: 2017</h3><br>
+            </div>
+
+        </div>
     </div>
 
+    <div id="Projects" class="section1 education-page">
+        <div>
+            <h1>Projects</h1>
+        </div>
+        <div class="education-card">
+            <div class="ed-pd3">
+                <h2>Kajwala</h2>
+                <h3>This project will help others to find all workers in a single platform</h3><br>
+            </div>
 
+            <div class="ed-pd3">
+                <h2>Kajwala</h2>
+                <h3>This project will help others to find all workers in a single platform</h3><br>
+            </div>
+            <div class="ed-pd3">
+                <h2>Kajwala</h2>
+                <h3>This project will help others to find all workers in a single platform</h3><br>
+            </div>
 
+        </div>
+    </div>
 
-    <script src="{{ asset('assets/js/script.js') }}"></script>
-</body>
-
-</html>
+    <div id="contact" class="contact-container  section1">
+        <div class="education-page">
+            <h1>Contact</h1>
+        </div>
+        <div class="ed-pd2">
+            <h2>Phone: 01885711459</h2>
+            <h3>email: islam15-5674@diu.edu.bd</h3><br>
+            <h3>email: islam15-5674@diu.edu.bd</h3><br>
+            <h3>email: islam15-5674@diu.edu.bd</h3><br>
+            <h3>email: islam15-5674@diu.edu.bd</h3><br>
+        </div>
+    </div>
+@endsection
