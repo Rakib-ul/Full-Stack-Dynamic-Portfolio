@@ -12,6 +12,7 @@
                 <a href="#education" class="padding top">Education</a>
                 <a href="#Projects" class="padding top">Projects</a>
                 <a href="#contact" class="padding top">Contact</a>
+                <a href="https://github.com/Rakib-ul" class="padding top">GitHub</a>
             </div>
         </div>
     </nav>
@@ -34,7 +35,7 @@
         </div>
     </div>
 
-    <div id="about" class="about-container section1">
+    <div id="about" class=" about-container section1">
         <div class="about-header">
             <h1>About Me</h1>
             <p>Hello! I am Md Rakibul Islam, a student at Daffodil International University and an aspiring Software

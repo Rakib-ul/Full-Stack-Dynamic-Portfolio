@@ -161,6 +161,8 @@
         }
 
         .about-text {
+            display: flex;
+            flex-wrap: wrap;
             max-width: 450px;
         }
 
