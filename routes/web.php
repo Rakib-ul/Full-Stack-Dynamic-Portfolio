@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Authcontroller;
-
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Dashboardcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,12 @@ Route::get('/register', function () {
 });
 
 Route::post('/register', [Authcontroller::class, 'register'])->name('register');
+
+//admin 
+Route::get('/', function () {
+    return view('Welcome');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/dashboard', [Dashboardcontroller::class, 'index'])->name('dashboard');
+});

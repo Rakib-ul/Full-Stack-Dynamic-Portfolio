@@ -80,7 +80,7 @@ input:focus {
 </head>
 <body>
     <div class="login-container">
-    <form class="login-form" action="{{route('login')}}" method="POST">
+    <form class="login-form" action="{{route('register')}}" method="POST">
         @csrf
       <h2>Admin Register</h2>
       
