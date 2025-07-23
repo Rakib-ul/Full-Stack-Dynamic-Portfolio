@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('education', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
             $table->string('type');
             $table->string('name');
             $table->string('institute');
@@ -21,6 +21,10 @@ return new class extends Migration
             $table->year('passing_year')->nullable();
             $table->string('grade')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('education', function (Blueprint $table) {
+        $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

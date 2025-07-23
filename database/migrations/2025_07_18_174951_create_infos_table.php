@@ -13,12 +13,16 @@ return new class extends Migration
     {
         Schema::create('infos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
             $table->string('portfolio')->nullable();
             $table->string('address')->nullable();
             $table->text('description')->nullable();
             $table->string('designation')->nullable();
             $table->timestamps();
+        });
+        
+        Schema::table('infos', function (Blueprint $table) {
+        $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
